@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+      - "actions"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    labels:
+      - "npm"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    labels:
+      - "go"
+    schedule:
+      interval: "daily"

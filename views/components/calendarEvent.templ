@@ -1,0 +1,25 @@
+package components
+
+import (
+    "fmt"
+    "github.com/zenginechris/studio/domain"
+)
+
+// 
+templ CalendarEventActions(event domain.CalendarEventContract) {
+    <div>
+        <div>
+            for _, p := range event.Registrations() {
+                <div>{p.UserID}</div>
+            }
+        </div>
+        <button hx-post={ templ.URL(fmt.Sprintf("/calendar/events/%s/register", event.ID().ToString())) } hx-swap="outerHTML">Attemgt</button>
+    </div>
+}
+
+templ CalendarEvent(event domain.CalendarEventContract) {
+    <div>
+        <h3>{ event.Name() }</h3>
+        @CalendarEventActions(event)
+    </div>
+}

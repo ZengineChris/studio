@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/aspect-ratio';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000;
+
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  --color-gray-950: #020617;
+
+  --color-white: #fff;
+
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --color-blue-50: #f1f7fd;
+  --color-blue-100: #deebfb;
+  --color-blue-200: #c5dff8;
+  --color-blue-300: #9dcaf3;
+  --color-blue-400: #6fadeb;
+  --color-blue-500: #4d8ee4;
+  --color-blue-600: #3872d8;
+  --color-blue-700: #2f5fc6;
+  --color-blue-800: #294896;
+  --color-blue-900: #284380;
+
+  --color-capri-50: #f1f9fe;
+  --color-capri-100: #e2f2fc;
+  --color-capri-200: #bee5f9;
+  --color-capri-300: #84d1f5;
+  --color-capri-400: #59c2f0;
+  --color-capri-500: #19a2de;
+  --color-capri-600: #0c81bd;
+  --color-capri-700: #0b6799;
+  --color-capri-800: #0e577e;
+  --color-capri-900: #114969;
+
+  --color-mikado-50: #fffceb;
+  --color-mikado-100: #fff5c6;
+  --color-mikado-200: #feeb89;
+  --color-mikado-300: #feda4b;
+  --color-mikado-400: #fdc519;
+  --color-mikado-500: #f7a709;
+  --color-mikado-600: #db7e04;
+  --color-mikado-700: #b65907;
+  --color-mikado-800: #93440d;
+  --color-mikado-900: #79390e;
+
+  --color-corn-50: #fefde8;
+  --color-corn-100: #fffdc2;
+  --color-corn-200: #fff889;
+  --color-corn-300: #ffee5a;
+  --color-corn-400: #fddb12;
+  --color-corn-500: #ecc106;
+  --color-corn-600: #cc9602;
+  --color-corn-700: #a36b05;
+  --color-corn-800: #86540d;
+  --color-corn-900: #724411;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

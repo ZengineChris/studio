@@ -1,0 +1,14 @@
+package pages
+
+import (
+	"github.com/zenginechris/studio/domain"
+)
+
+templ CheckIn(event domain.CalendarEventContract, registration domain.Registration) {
+    @Layout() {
+       <div> Ich bin das event to checkin</div>
+       <form method="POST" action="/registration/ethtu">
+            <input type="submit"/>
+        </form>
+    }
+}

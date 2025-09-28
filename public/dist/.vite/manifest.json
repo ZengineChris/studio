@@ -1,0 +1,11 @@
+{
+  "assets/js/main.js": {
+    "file": "assets/main-BruTot2u.js",
+    "name": "main",
+    "src": "assets/js/main.js",
+    "isEntry": true,
+    "css": [
+      "assets/main-Dq0eO-tJ.css"
+    ]
+  }
+}

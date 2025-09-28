@@ -1,0 +1,26 @@
+package pages
+
+import (
+	"github.com/zenginechris/studio/views/components"
+	"github.com/zenginechris/studio/domain"
+)
+
+type UserHomeViewModel struct {
+    User domain.User
+    Classes []domain.CalendarEventContract
+}
+
+
+templ UserHome(vm UserHomeViewModel) {
+    @Layout(){
+        @components.Navbar(vm.User)
+        @Container(){
+        <div>
+            <h2>Next Classes</h2> 
+            for _, e := range vm.Classes {
+                @components.CalendarEvent(e)
+            }
+        </div>
+        }
+    }
+}

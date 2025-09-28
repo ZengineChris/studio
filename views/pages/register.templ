@@ -1,0 +1,14 @@
+package pages
+
+import (
+	"github.com/zenginechris/studio/domain"
+)
+
+templ Register(event domain.CalendarEventContract) {
+    @Layout() {
+       <div>Ich bin das event to register</div>
+       <form action="/register/etehet" method="POST">
+        <input type="submit"/>
+       </form>
+    }
+}
